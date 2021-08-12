@@ -178,7 +178,7 @@ def replace_chain():
 def start_app():
     print("Starting Flask app...")
     app.run(port=5000, debug=False)
-#######################################
+###################
 class qr(MDApp):
     def read_barcodes(frame):
         barcodes = pyzbar.decode(frame)
