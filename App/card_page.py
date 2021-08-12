@@ -2,7 +2,6 @@ from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import Screen
-
 from helpers import bottom_toolbar
 
 
