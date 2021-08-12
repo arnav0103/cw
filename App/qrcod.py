@@ -25,6 +25,5 @@ def main():
         if cv2.waitKey(1) & 0xFF == 27:
             break
 
-#4
 if __name__ == '__main__':
     main()
