@@ -19,26 +19,17 @@ from flask import Flask, jsonify, request
 import requests
 from uuid import uuid4
 from urllib.parse import urlparse
+from flask_pymongo import PyMongo
+from pymongo import MongoClient
+from Tool import app,mongo
 
-
-new_environ = os.environ.copy()
-
-app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return 'Hello World'
-def start_app():
-    print("Starting Flask app...")
-    app.run(port=5000, debug=False)     #specify separate port to run Flask app
-
-class MyApp(MDApp):
-
-    def build(self):
-        hi = hello()
-        return MDLabel(text=hi)
+def index():
+    user_collection = mongo.db.users
+    user_collection.insert({'name': 'Tijil', 'amount' : '500'})
+    user_collection.insert({'name': 'Arnav', 'amount' : '0'})
+    return "<h1> USER ADDED </h1>"
 
 if __name__ == '__main__':
-    if os.environ.get("WERKZEUG_RUN_MAIN") != 'true':
-        threading.Thread(target=start_app).start()
-    MyApp().run()
+    app.run(debug=True)

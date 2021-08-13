@@ -144,7 +144,7 @@ def is_valid():
 @app.route('/add_transaction' , methods = ['POST'])
 def add_transaction():
     a_file = open("transaction.json", "r")
-    json_objects = json.load(a_file)
+    json = json.load(a_file)
     a_file.close()
     transaction_keys = ['sender' , 'receiver' , 'amount']
     if not all (key in json_objects for key in transaction_keys):
