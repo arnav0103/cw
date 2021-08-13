@@ -253,8 +253,7 @@ class my_app(MDApp):
             with app.app_context():
                 connect_node()
                 add_transaction()
-                replace_chain()
-                
+
 if __name__ == '__main__':
     if os.environ.get("WERKZEUG_RUN_MAIN") != 'true':
         threading.Thread(target=start_app).start()
