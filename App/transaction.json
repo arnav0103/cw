@@ -1,1 +1,5 @@
-{"sender": "tijil", "receiver": "http://en.m.wikipedia.org", "amount": "500"}
+{
+    "sender": "tijil",
+    "receiver": "http://en.m.wikipedia.org",
+    "amount": "500"
+}
